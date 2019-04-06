@@ -1,0 +1,14 @@
+img {
+    width: 8rem;
+    height: 10rem;
+}
+.movie-details .row {
+    margin-bottom: 3rem;
+}
+.info-title {
+    color: rgb(139, 31, 31);
+}
+.movie-details .row img {
+    width: 13rem;
+    height: 15rem;
+}

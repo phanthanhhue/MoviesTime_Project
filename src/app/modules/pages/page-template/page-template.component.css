@@ -1,0 +1,73 @@
+.my-nav .navbar-brand, .my-nav .navbar-collapse .navbar-nav .nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+.my-nav .navbar-brand {
+    padding: 1rem;
+    font-size: 2rem;
+    color: rgb(139, 31, 31);
+}
+
+.my-nav .navbar-collapse .navbar-nav .nav-link:hover {
+    color: rgb(139, 31, 31);
+    border-bottom: 2px solid rgb(139, 31, 31);
+}
+
+/* .my-nav .navbar-collapse .navbar-nav .active {
+    color: rgb(139, 31, 31);
+    border-bottom: 2px solid rgb(139, 31, 31);
+} */
+
+.sign-out {
+    margin-right: 2rem;
+}
+
+.sign-out .btn-sign-out {
+    border: transparent;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+.sign-out .fa {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+}
+.sign-out:hover .fa, .sign-out:hover .btn-sign-out{
+    cursor: pointer;
+    color: rgb(139, 31, 31);
+}
+
+.header .my-nav {
+    max-height: 8.5rem;
+}
+.account .sign-in .nav-item {
+    display: inline-block;
+    list-style-type: none;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.account .sign-in .nav-item .nav-link {
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.account .sign-in .nav-item .nav-link:hover {
+    border-bottom: 2px solid rgb(139, 31, 31);
+    color: rgb(139, 31, 31);
+}

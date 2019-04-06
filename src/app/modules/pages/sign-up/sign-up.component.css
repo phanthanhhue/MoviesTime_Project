@@ -1,0 +1,12 @@
+.wrapper_sign-up {
+    width: 40%;
+    margin: auto;
+    border: 2px solid rgb(139, 31, 31);
+    border-radius: 0.7rem;
+    padding: 2rem;
+}
+
+.wrapper_sign-up .sign-up-form .form-group .alert {
+    background-color: transparent;
+    border: none;
+}

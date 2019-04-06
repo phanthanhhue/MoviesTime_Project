@@ -1,0 +1,11 @@
+<div class="screening-room">
+  <div>
+    <h3 class="screen"></h3>
+  </div>
+  <div class="seats">
+    <app-seats [seats]='seats' *ngFor="let seats of seatsList; let i = index;">
+      <br *ngIf="(i+1) % 10 == 0">
+    </app-seats>
+    <button class="btn btn-primary" (click)="bookingSeat()">Book now</button>
+  </div>
+</div>

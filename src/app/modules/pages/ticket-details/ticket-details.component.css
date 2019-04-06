@@ -1,0 +1,16 @@
+.screen {
+    background-color: white;
+    height: 10rem;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    background-image: url('https://res.cloudinary.com/dxzguyvzh/image/upload/v1553481506/camera.png');
+    background-repeat: no-repeat;
+    background-size: 6.5rem 5rem;
+    background-position: center;
+}
+
+.seats {
+    text-align: center;
+    margin-top: 10rem;
+}

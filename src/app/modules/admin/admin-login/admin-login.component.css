@@ -1,0 +1,30 @@
+.wrapper_admin-login {
+    width: 40%;
+    margin: auto;
+    margin-top: 4rem; 
+}
+.admin-login-form {
+    border: 2px solid rgb(139, 31, 31);
+    border-radius: 0.7rem;
+    background-color: rgba(136, 120, 120, 0.644);  
+}
+.admin-login-form .row {
+    padding: 2rem;
+}
+.wrapper_admin-login .login-title {
+    background-color: rgba(116, 105, 103, 0.486);
+    width: 100%;
+    padding: 1rem;
+    border-top-left-radius: 0.7rem; 
+    border-top-right-radius: 0.7rem; 
+}
+.admin-login-form .row .col-md-3 img {
+    width: 100%;
+}
+.admin-login-form .btn-login {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.admin-login-form .btn {
+    padding: 0.7rem 1.8rem;
+}

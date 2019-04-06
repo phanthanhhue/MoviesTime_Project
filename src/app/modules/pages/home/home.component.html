@@ -1,0 +1,124 @@
+<!-- CAROUSEL -->
+<div id="myCarousel" class="carousel slide my-carousel" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img src="https://res.cloudinary.com/dxzguyvzh/image/upload/v1552616902/2.jpg">
+      <div class="carousel-item_trailer" type="button" data-toggle="modal" data-target="#modelFirst"></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dxzguyvzh/image/upload/v1552616409/3.jpg">
+      <div class="carousel-item_trailer" type="button" data-toggle="modal" data-target="#modelSecond"></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dxzguyvzh/image/upload/v1552616923/4.jpg">
+      <div class="carousel-item_trailer" type="button" data-toggle="modal" data-target="#modelThird"></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dxzguyvzh/image/upload/v1552616978/5.jpg">
+      <div class="carousel-item_trailer" type="button" data-toggle="modal" data-target="#modelFour"></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dxzguyvzh/image/upload/v1552616983/6.jpg">
+      <div class="carousel-item_trailer" type="button" data-toggle="modal" data-target="#modelIFive"></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dxzguyvzh/image/upload/v1552616986/7.jpg">
+      <div class="carousel-item_trailer" type="button" data-toggle="modal" data-target="#modelSix"></div>
+    </div>
+  </div>
+  <!-- END CAROUSEL -->
+
+  <!-- MOVIE LIST -->
+  <h2 class="great-title">Latest Movies</h2>
+  <div class="row list-item">
+    <div class="col-md-3" *ngFor="let item of movieList">
+      <div class="card wow fadeInUp">
+        <img class="card-img-top" src="{{item.HinhAnh}}" alt="{{item.HinhAnh}}">
+        <div class="card-body">
+          <h4 class="card-title">{{item.TenPhim}}</h4>
+          <p class="card-text">{{item.Mota}}</p>
+          <a class="btn btn-primary" routerLink='/movie-details' [queryParams]='{MaPhim:item.MaPhim,TenPhim:item.TenPhim}'>Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- MODAL CAROUSEL TRAILER-->
+  <div class="modal fade modal-carousel-trailer" id="modelFirst" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe src="https://www.youtube.com/embed/lhQiwVi3jdo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-carousel-trailer" id="modelSecond" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <iframe src="https://www.youtube.com/embed/LbduDRH2m2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-carousel-trailer" id="modelThird" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <iframe src="https://www.youtube.com/embed/MxEw3elSJ8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade modal-carousel-trailer" id="modelFour" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <iframe src="https://www.youtube.com/embed/Aj7ty6sViiU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade modal-carousel-trailer" id="modelFive" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <iframe src="https://www.youtube.com/embed/xz-KgMtU_BMo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade modal-carousel-trailer" id="modelSix" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <iframe src="https://www.youtube.com/embed/kTTCi55jpL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+</div>

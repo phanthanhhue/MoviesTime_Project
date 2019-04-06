@@ -1,0 +1,12 @@
+.contact_comment {
+    border: 2px solid rgb(139, 31, 31);
+    border-radius: 0.7rem;
+    padding: 2rem;
+}
+
+.contact_maps {
+    height: 100%;
+    border: 2px solid rgb(139, 31, 31);
+    border-radius: 0.7rem;
+    padding: 2rem;
+}

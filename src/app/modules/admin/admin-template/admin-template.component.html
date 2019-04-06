@@ -1,0 +1,69 @@
+<!-- HEADER -->
+<header class="header movie-header">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="col-md-2">
+      <a class="navbar-brand">Movie Times</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="col-md-10">
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-circle"></i>
+          </button>
+          <div class="dropdown-menu " aria-labelledby="triggerId">
+            <a class="dropdown-item">
+              <i class="fa fa-id-card-o"></i>
+              <span>Profile</span>
+            </a>
+            <a class="dropdown-item">
+              <i class="fa fa-sliders"></i>
+              <span>Setting</span>
+            </a>
+            <a class="dropdown-item">
+              <i class="fa fa-sign-out"></i>
+              <span>Sign out</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+<div class="container-fluid">
+  <div class="row movie-content">
+    <!-- SIDE-BAR -->
+    <div class="col-md-2 my-sidebar">
+      <button routerLink='manage-staff' routerLinkActive='active' class="btn-sidebar">
+          <i class="fa fa-users"></i>
+        <span>Staff Management</span>
+      </button>
+      <button routerLink='manage-user' routerLinkActive='active' class="btn-sidebar">
+          <i class="fa fa-user"></i>
+        <span>Users Management</span>
+      </button>
+      <button routerLink='manage-movie' routerLinkActive='active' class="btn-sidebar">
+          <i class="fa fa-film"></i>
+        <span>Movies Management</span>
+      </button>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="col-md-10 content">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+  </div>
+</div>

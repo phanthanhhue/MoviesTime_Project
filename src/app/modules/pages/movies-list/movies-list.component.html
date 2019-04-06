@@ -1,0 +1,14 @@
+<h2 class="great-title">Latest Movies</h2>
+<div class="row list-item">
+  <div class="col-md-3" *ngFor="let item of movieList">
+    <div class="card">
+      <img class="card-img-top" src="{{item.HinhAnh}}">
+      <div class="card-body">
+        <h4 class="card-title">{{item.TenPhim}}</h4>
+        <p class="card-text">{{item.Mota}}</p>
+        <a class="btn btn-success" routerLink='/movie-details'
+          [queryParams]='{MaPhim:item.MaPhim,TenPhim:item.TenPhim}'>Details</a>
+      </div>
+    </div>
+  </div>
+</div>

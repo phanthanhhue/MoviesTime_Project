@@ -1,0 +1,33 @@
+.my-carousel img {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item_trailer {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+.carousel-item_trailer:hover {
+    cursor: pointer;
+    background-image: url('https://res.cloudinary.com/dxzguyvzh/image/upload/v1552614625/play-button.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(5, 4, 4, 0.37);
+}
+
+.modal-carousel-trailer .modal-content iframe{
+    height: 600px;
+    width: 100%;
+}

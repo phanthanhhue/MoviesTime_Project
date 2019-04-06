@@ -1,0 +1,20 @@
+.wrapper_sign-in {
+    width: 40%;
+    margin: auto;
+    border: 2px solid rgb(139, 31, 31);
+    padding: 2rem;
+    border-radius: 0.7rem;
+}
+
+.wrapper_sign-in .row a {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper_sign-in .row .left:hover, .wrapper_sign-in .row .right:hover {
+    color: rgb(139, 31, 31);
+}
+
+.wrapper_sign-in .row {
+    margin: 1rem;
+}

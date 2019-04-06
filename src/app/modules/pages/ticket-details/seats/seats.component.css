@@ -1,0 +1,21 @@
+.btnSeat {
+    background-color: transparent;
+    background-image: url('https://res.cloudinary.com/dxzguyvzh/image/upload/v1553400564/seat.png');
+    background-size: cover;
+    margin: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-repeat: no-repeat;
+}
+
+.booked-seat {
+    cursor: no-drop;
+    color: black
+}
+.booking-seat {
+    cursor: pointer;
+    background-image: url('https://res.cloudinary.com/dxzguyvzh/image/upload/v1553479704/seat-available.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

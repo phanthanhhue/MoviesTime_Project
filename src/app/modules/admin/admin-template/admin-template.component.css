@@ -1,0 +1,62 @@
+.movie-header .navbar .col-md-2 .navbar-brand {
+    text-transform: uppercase;
+    color: rgb(139, 31, 31);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.movie-header .navbar .collapse {
+    float: right;
+}
+.movie-header .navbar .collapse .dropdown {
+    margin-left: 2rem;
+}
+
+.movie-header .navbar .collapse .dropdown .dropdown-menu {
+    /* dropdown leftside */
+    left: auto;
+    right: 0;
+}
+.movie-header .navbar .dropdown .dropdown-menu .dropdown-item span {
+    padding-left: 1rem;
+}
+
+.movie-header .navbar .dropdown .dropdown-menu {
+    background-color: white;
+    color: black;
+    width: 100%;   
+    font-size: 1.3rem;
+}
+.dropdown .dropdown-item:hover {
+    color: rgb(139, 31, 31);
+    background-color: rgba(0, 0, 0, 0.226);
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+/* CONTENT */
+.btn-sidebar {
+    width: 100%;
+    background-color: transparent;
+    border: transparent;
+    margin: 1rem 0;
+    font-size: 1.5rem; 
+    color: white;
+    text-align: left;
+}
+.btn-sidebar .fa {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+}
+.btn-sidebar:hover {
+    color: rgb(139, 31, 31);
+    cursor: pointer;
+}
+
+.movie-content .active {
+    color: rgb(139, 31, 31);
+    border-bottom: 2px solid rgb(139, 31, 31);
+    border: transparent;
+}

@@ -1,0 +1,62 @@
+<div class="wrapper_sign-up">
+  <h3 class="great-title">Sign Up</h3>
+  <form #signUpForm='ngForm' class="sign-up-form" (ngSubmit)="SignUp(signUpForm.value)">
+      <div class="form-group">
+          <label for="">Full Name:</label>
+          <input type="text" name="FullName" id="" class="form-control" #fullName='ngModel' ngModel required>
+          <div *ngIf="(fullName.touched || fullName.dirty) && fullName.errors">
+            <small *ngIf="fullName.errors.required" class="alert alert-danger text-danger">Full Name is not null!</small>
+          </div>
+        </div>
+    <div class="form-group">
+      <label for="">User Name:</label>
+      <input type="text" name="UserName" id="" class="form-control" #userName='ngModel' minlength="3" maxlength="32"
+        ngModel required>
+      <div *ngIf="(userName.touched || userName.dirty) && userName.errors">
+        <small *ngIf="userName.errors.required" class="alert alert-danger text-danger">User Name is not null!</small>
+        <small *ngIf="userName.errors.minlength || userName.erorrs.maxlength" class="alert alert-danger text-danger">
+          User Name must be 3-32 characters!</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Password:</label>
+      <input type="password" name="Password" id="" class="form-control" #password='ngModel' minlength="8" maxlength="32"
+        ngModel required>
+      <div *ngIf="(password.touched || password.dirty) && password.errors">
+        <small *ngIf="password.errors.required" class="alert alert-danger text-danger">Password is not null!</small>
+        <small *ngIf="password.errors.minlength || password.erorrs.maxlength" class="alert alert-danger text-danger">
+          Password must be 8-32 characters!</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Verify Password:</label>
+      <input type="password" name="VerifyPassword" id="" class="form-control" #verifyPassword='ngModel'
+        [ngClass]="{'ng-invalid': verifyPassword.value != password.value}" ngModel required>
+      <div
+        *ngIf="(verifyPassword.touched || verifyPassword.dirty) && (verifyPassword.errors || verifyPassword.value != password.value)">
+        <small *ngIf="checkPassword(verifyPassword.value, password.value)" class="alert alert-danger text-danger">
+          Password is not match!
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Email:</label>
+      <input minlength="6" maxlength="32" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="Email" #email='ngModel' id="" class="form-control" ngModel required>
+      <div *ngIf="(email.touched || email.dirty) && email.errors">
+        <small *ngIf="email.errors.required" class="alert alert-danger text-danger">Email is not null!</small>
+        <small class="alert alert-danger text-danger" *ngIf="email.errors.pattern">Email invalid format! </small>
+        <small class="alert alert-danger text-danger" *ngIf="email.errors.minlength || email.errors.maxlength">Email must be 6-32 characters!</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Phone Number</label>
+      <input type="number" name="PhoneNumber" #phoneNumber="ngModel" id="" class="form-control" ngModel >
+      <div class="alert alert-danger text-danger" *ngIf="phoneNumber.errors">
+        <small class="alert alert-danger text-danger" >Phone Number is only number!</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="signUpForm.invalid || signUpForm.submited" class="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
+</div>

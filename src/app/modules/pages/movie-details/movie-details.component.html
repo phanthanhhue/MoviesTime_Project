@@ -1,0 +1,42 @@
+<div class="container movie-details">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{movie.HinhAnh}}" />
+    </div>
+    <div class="col-md-8">
+      <table class="table">
+        <tr>
+          <th></th>
+          <th class="info-title">Movie Infomation</th>
+        </tr>
+        <tr>
+          <td class="info-title">Movie Title:</td>
+          <td>{{movie.TenPhim}}</td>
+        </tr>
+        <tr>
+          <td class="info-title">Description:</td>
+          <td>{{movie.MoTa}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <h3 class="great-title">Showtimes</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Theater</th>
+        <th>Release date</th>
+        <th>Showtimes</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let showtimes of movie.LichChieu">
+        <td>{{showtimes.Rap.TenRap}}</td>
+        <td>{{showtimes.NgayChieuGioChieu | date:'dd-MM-yyyy'}}</td>
+        <td>{{showtimes.NgayChieuGioChieu | date:'hh:mm'}}</td>
+        <td><a class="btn btn-success" routerLink="/ticket-details/{{showtimes.MaLichChieu}}">Book now</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
