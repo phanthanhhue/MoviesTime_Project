@@ -3,33 +3,29 @@ import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminTemplateComponent } from './admin-template/admin-template.component';
-import { ManageStaffComponent } from './manage-staff/manage-staff.component';
-import { ManageMoviesComponent } from './manage-movies/manage-movies.component';
-import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CheckAdminSignInGuard } from '../../_core/guards/check-admin-sign-in.guard';
+import { ManageMovieModule } from './manage-movie/manage-movie.module';
+import { ManageStaffModule } from './manage-staff/manage-staff.module';
+import { ManageUserModule } from './manage-user/manage-user.module';
 
 
 
 const adminRoutes: Routes = [
-        { path: 'admin-login', component: AdminLoginComponent },
-  // {
-  //   path: '', component: AdminTemplateComponent, children: [
-  //     { path: 'manage-staff', component: ManageStaffComponent },
-  //     { path: 'manage-user', component: ManageUsersComponent },
-  //     { path: 'manage-movie', component: ManageUsersComponent },
-
-  //   ]
-  // },
+  { path: 'admin-login', component: AdminLoginComponent },
+  {
+    path: '', component: AdminTemplateComponent, canActivate: [CheckAdminSignInGuard], children: [
+      { path: 'manage-movie', loadChildren:() => ManageMovieModule},
+      { path: 'manage-staff', loadChildren:() => ManageStaffModule},
+      { path: 'manage-user', loadChildren:() => ManageUserModule},
+    ]
+  },
 
 ]
 
 @NgModule({
   declarations: [
     AdminTemplateComponent,
-    ManageStaffComponent,
-    ManageMoviesComponent,
-    ManageUsersComponent,
     AdminLoginComponent,
   ],
   imports: [

@@ -1,0 +1,23 @@
+
+<a class="btn btn-success my-3" routerLink="add-staff">Add Staff</a>
+
+<router-outlet></router-outlet>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of staffList">
+      <td>{{item.StaffID}}</td>
+      <td>{{item.FullName}}</td>
+      <td>{{item.Age}}</td>
+    </tr>
+  </tbody>
+</table>
+
+

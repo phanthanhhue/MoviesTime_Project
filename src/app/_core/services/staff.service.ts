@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class StaffService {
 
   private staffList: Staff[] = [
-        
-  ]
+    { StaffID: 2, FullName: 'Phan Thanh Huệ', Age: 29 },
+  ];
 
   constructor(private http: HttpClient) { }
 

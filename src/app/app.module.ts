@@ -6,13 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { PagesModule } from './modules/pages/pages.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { CheckAdminSignInGuard } from './_core/guards/check-admin-sign-in.guard';
 
 
 
 const appRoutes: Routes = [
   { path: 'home', loadChildren: () => PagesModule },
   { path: '', loadChildren: () => PagesModule },
-  { path: 'admin', loadChildren: () => AdminModule },
+  { path: 'admin', loadChildren: () => AdminModule},
 ]
 
 @NgModule({

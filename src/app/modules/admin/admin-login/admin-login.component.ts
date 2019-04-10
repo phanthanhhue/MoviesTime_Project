@@ -18,7 +18,6 @@ export class AdminLoginComponent implements OnInit {
 
   AdminLogin(adminLoginInfo: any) {
     this.staffService.adminLogin(adminLoginInfo.UserName, adminLoginInfo.Password).subscribe((data) => {
-      console.log(data)
       if (typeof data === 'object' && data.MaLoaiNguoiDung === 'QuanTri') {
         const stoAdminLogin: string = JSON.stringify(data);
         localStorage.setItem('stoAdminLogin', stoAdminLogin);

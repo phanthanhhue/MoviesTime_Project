@@ -1,0 +1,22 @@
+<a class="btn btn-success my-3" routerLink="add-user">Add User</a>
+
+<router-outlet></router-outlet>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Release date  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of userList">
+        <td>{{item.TaiKhoan}}</td>
+        <td>{{item.MatKhau}}</td>
+        <td>{{item.Email}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

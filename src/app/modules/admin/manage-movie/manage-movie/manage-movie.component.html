@@ -1,0 +1,23 @@
+<a class="btn btn-success my-3" routerLink="add-movie">Add Movie</a>
+<router-outlet></router-outlet>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Release date  </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of movieList">
+      <td>{{item.TenPhim}}</td>
+      <td>{{item.MoTa}}</td>
+      <td>{{item.Ngaykhoichieu}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+

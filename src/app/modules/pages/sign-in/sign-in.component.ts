@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/_core/services/user.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { PageTemplateComponent } from '../page-template/page-template.component'
 
 @Component({
   selector: 'app-sign-in',
@@ -25,6 +26,7 @@ export class SignInComponent implements OnInit {
         Swal.fire('Successful!', 'Login successfull!', 'success').then(() => {
           this.router.navigate(['/movie-list']);
         });
+        
       }
       else {
         Swal.fire('Warning', 'Username or password incorrect!', 'warning');

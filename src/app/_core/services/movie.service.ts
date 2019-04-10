@@ -32,6 +32,16 @@ export class MovieService {
     return observable;
   }
 
+  public addMovie(movie: any) {
+    let linkApi = 'http://svcy2.myclass.vn/api/QuanLyPhim/ThemPhimMoi';
+    const header: HttpHeaders = new HttpHeaders();
+    header.append('Content-Type','application/json;charset=UTF-8');
+    const observable = this.http.post(linkApi, movie, {headers: header});
+    console.log(movie);
+    return observable;
+    
+  }
+
   public dropMovie(maPhim:number): Observable<any[]> {
     let response: any = this.http.delete('http://svcy2.myclass.vn/api/QuanLyPhim/XoaPhim?MaPhim='+maPhim);
     return response;

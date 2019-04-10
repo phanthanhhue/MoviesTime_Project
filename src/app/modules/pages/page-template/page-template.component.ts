@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-template',
@@ -6,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-template.component.css']
 })
 export class PageTemplateComponent implements OnInit {
-
-  constructor() { }
+  show: boolean = false
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  SignOut(userSignIn: any) {
-    localStorage.clear();
+  SignOut() {
+      localStorage.clear();
+      this.router.navigate(['/home']);
+      return this.show = true
   }
 }

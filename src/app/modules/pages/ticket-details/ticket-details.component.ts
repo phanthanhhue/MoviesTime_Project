@@ -40,7 +40,7 @@ export class TicketDetailsComponent implements OnInit {
   GetTicketDetails(showtimesID: number) {
     this.movieService.getTicketDetails(showtimesID).subscribe((data: any) => {
       if (typeof data === 'object') {
-        console.log(data);
+        // console.log(data);
         this.seatsList = data.DanhSachGhe;
 
       }

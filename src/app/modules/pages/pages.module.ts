@@ -26,7 +26,6 @@ const pageRoutes: Routes = [
       { path: 'sign-in', component: SignInComponent },
       { path: 'sign-up', component: SignUpComponent, canDeactivate: [CheckSaveFormGuard] },
       { path: 'ticket-details/:id', component: TicketDetailsComponent }
-
     ]
   }
 ]

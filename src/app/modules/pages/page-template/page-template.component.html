@@ -35,22 +35,22 @@
       </div>
       <div class="col-md-2 col-sm-3">
         <div class="account">
-          <div class="sign-in ">
-            <ul>
-              <li class="nav-item">
-                <a class="nav-link" routerLink='/sign-in' routerLinkActive="active">Sign In</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink='/sign-up' routerLinkActive="active">Sign Up</a>
-              </li>
-            </ul>
-          </div>
-          <div class="sign-out account_deactived">
-            <a class="btn btn-sign-out">
-              <i class="fa fa-user-o"></i>
-              Sign Out
-            </a>
-          </div>
+            <div class="sign-in" *ngIf="show">
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink='/sign-in' routerLinkActive="active">Sign In</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink='/sign-up' routerLinkActive="active">Sign Up</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sign-out" *ngIf="!show">
+              <a class="btn btn-sign-out" (click)='SignOut()'>
+                <i class="fa fa-user-o"></i>
+                Sign Out
+              </a>
+            </div>
         </div>
       </div>
     </nav>
