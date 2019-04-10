@@ -13,11 +13,11 @@ export class MovieService {
   @Output() seats = new EventEmitter();
   
   public getMovieList(): Observable<any[]> {
-    let response: any = this.http.get('http://svcy2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP05')
+    let response: any = this.http.get('https://svcy2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP05')
     return response;
   }
   public getMovieDetails(maPhim:number): Observable<any[]> {
-    let response: any = this.http.get('http://svcy2.myclass.vn/api/QuanLyPhim/LayChiTietPhim?MaPhim='+maPhim);
+    let response: any = this.http.get('https://svcy2.myclass.vn/api/QuanLyPhim/LayChiTietPhim?MaPhim='+maPhim);
     return response;
   }
   public getTicketDetails(maLichChieu:number): Observable<any[]> {
@@ -25,7 +25,7 @@ export class MovieService {
     return response;
   }
   public getTicket(ticketDetails:any) {
-    let linkApi =`http://svcy2.myclass.vn/api/QuanLyDatVe/DatVe`;
+    let linkApi =`https://svcy2.myclass.vn/api/QuanLyDatVe/DatVe`;
     const header: HttpHeaders = new HttpHeaders();
     header.append('Content-Type','application/json;charset=UTF-8');
     const observable = this.http.post(linkApi, ticketDetails, {headers: header});
@@ -33,7 +33,7 @@ export class MovieService {
   }
 
   public addMovie(movie: any) {
-    let linkApi = 'http://svcy2.myclass.vn/api/QuanLyPhim/ThemPhimMoi';
+    let linkApi = 'https://svcy2.myclass.vn/api/QuanLyPhim/ThemPhimMoi';
     const header: HttpHeaders = new HttpHeaders();
     header.append('Content-Type','application/json;charset=UTF-8');
     const observable = this.http.post(linkApi, movie, {headers: header});
@@ -43,7 +43,7 @@ export class MovieService {
   }
 
   public dropMovie(maPhim:number): Observable<any[]> {
-    let response: any = this.http.delete('http://svcy2.myclass.vn/api/QuanLyPhim/XoaPhim?MaPhim='+maPhim);
+    let response: any = this.http.delete('https://svcy2.myclass.vn/api/QuanLyPhim/XoaPhim?MaPhim='+maPhim);
     return response;
   }
 
